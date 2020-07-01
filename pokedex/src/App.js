@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react'; 
+import 'bootstrap/dist/css/boostrap.min.css';
 import './App.css';
+import NavBar from './components/layout/NavBar';  
 
-function App() {
-  return (
-    <div className="App"> <h1>Hello Pokemon Masters</h1>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App"> 
+        <NavBar /> 
+      </div>
+    );
+  }
 }
 
 export default App;
