@@ -5,7 +5,7 @@ import axios from 'axios';
 export default class PokeList extends Component {
 
     state = {
-        url : 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=151',
+        url : ' https://pokeapi.co/api/v2/pokemon/?limit=151',
         pokemon: null 
     }; 
 
