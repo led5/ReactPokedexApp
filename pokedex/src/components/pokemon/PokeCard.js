@@ -1,5 +1,7 @@
 import React, { Component } from 'react'; 
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+
 
 const Sprite = styled.img `
     width: 5em;
@@ -13,6 +15,18 @@ const Card = styled.div`
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
     }
 `; 
+
+const StyledLink = styled(Link)`
+        text-decoration: none;
+        color: black;
+        &: focus,
+        &: hover,
+        &: visited,
+        &: link,
+        &: active {
+            text-decoration: none;
+        }
+    `;
 
 // Card represents a single pokemon
 export default class PokeCard extends Component {
@@ -38,6 +52,7 @@ export default class PokeCard extends Component {
 
         return (
             <div className="col-md-3 cold-sm-6 mb-5">
+                <StyledLink to={`pokemon/${this.state.pokemonId}`}>
                 <Card className="card">
                     <h5 className="card-header"><h1>{this.state.pokemonId}</h1></h5>
                     <Sprite className="card-img-top mx-auto mt-2" 
@@ -48,6 +63,7 @@ export default class PokeCard extends Component {
                         .join(' ')}</h6>
                     </div>
                 </Card>
+                </StyledLink>
             </div>
         )
     }
