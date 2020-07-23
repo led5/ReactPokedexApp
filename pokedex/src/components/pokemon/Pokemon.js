@@ -57,32 +57,6 @@ export default class Pokemon extends Component {
         const name = pokeRes.data.name;
         const image = pokeRes.data.sprites.front_default;
 
-        // Extract statistics:
-        let { hp, attack, defense, speed, specialAttack, specialDefense } = "";
-
-        pokeRes.data.stats.map((stat) => {
-            switch (stat.stat.name) {
-                case "hp":
-                    hp = stat["base_stat"];
-                    break;
-                case "attack":
-                    attack = stat["base_stat"];
-                    break;
-                case "defense":
-                    defense = stat["base_stat"];
-                    break;
-                case "speed":
-                    speed = stat["base_stat"];
-                    break;
-                case "special-attack":
-                    specialAttack = stat["base_stat"];
-                    break;
-                case "special-defense":
-                    specialDefense = stat["base_stat"];
-                    break;
-            }
-        });
-
         const height =
             Math.round((pokeRes.data.height * 0.328084 + 0.0001) * 100) / 100;
         const weight =
@@ -99,21 +73,8 @@ export default class Pokemon extends Component {
             })
             .join(", ");
 
-        const evs = pokeRes.data.stats
-            .filter((stat) => {
-                if (stat.effort > 0) return true;
-                return false;
-            })
-            .map((stat) => {
-                return `${stat.effort} ${stat.stat.name
-                    .toLowerCase()
-                    .split("-")
-                    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                    .join(" ")}`;
-            })
-            .join(", ");
 
-        // Get description, catch rate, egg groups, gender ratio, hatch steps
+        // Get description
         await axios.get(pokeSpecies).then((res) => {
             let description = "";
             res.data.flavor_text_entries.some((flavor) => {
@@ -123,30 +84,8 @@ export default class Pokemon extends Component {
                 }
             });
 
-            const femaleRate = res.data["gender_rate"];
-            const genderRatioFemale = 12.5 * femaleRate;
-            const genderRatioMale = 12.5 * (8 - femaleRate);
-            const catchRate = Math.round((100 / 255) * res.data["capture_rate"]);
-
-            const eggGroups = res.data["egg_groups"]
-                .map((group) => {
-                    return group.name
-                        .toLowerCase()
-                        .split("-")
-                        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                        .join(" ");
-                })
-                .join(", ");
-
-            const hatchSteps = 255 * (res.data["hatch_counter"] + 1);
-
             this.setState({
                 description,
-                genderRatioFemale,
-                genderRatioMale,
-                catchRate,
-                eggGroups,
-                hatchSteps,
             });
         });
 
@@ -155,18 +94,9 @@ export default class Pokemon extends Component {
             pokemonId,
             name,
             types,
-            stats: {
-                hp,
-                attack,
-                defense,
-                speed,
-                specialAttack,
-                specialDefense,
-            },
             height,
             weight,
             abilities,
-            evs,
         });
     }
 
@@ -180,7 +110,6 @@ export default class Pokemon extends Component {
                                 <h5>{this.state.pokemonId}</h5>
                             </div>
                             <div className="col-7">
-
                                 <div className="float-right">
                                     {this.state.types.map(type => (
                                         <span
@@ -216,123 +145,20 @@ export default class Pokemon extends Component {
                                     .join(' ')}
                               </h4>
                               <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">HP</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.hp}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.hp}</small>
-                                            </div>
-                                      </div>
-                                  </div>
+                                  <div className="col-12 col-md-3">Abilities</div>
+                                  <h4 className="mx-auto">
+                                {this.state.abilities
+                                    .toLowerCase()
+                                    .split(' ')
+                                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                                    .join(' ')}
+                              </h4>
                               </div>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Attack</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.attack}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.attack}</small>
-                                            </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Defense</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.defense}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.defense}</small>
-                                            </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Special Attack</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.specialAttack}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.specialAttack}</small>
-                                            </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Special Defense</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.specialDefense}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.specialDefense}</small>
-                                            </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Speed</div>
-                                  <div className="col-12 col-md-9">
-                                      <div className="progress">
-                                          <div 
-                                            className="progress-bar"
-                                            role="progressBar" 
-                                            style={{
-                                                  width: `${this.state.stats.speed}%`
-                                            }}
-                                            aria-avaluenow="25"
-                                            aria-avaluenow="0"
-                                            aria-avaluenow="100"
-                                            ><small>{this.state.stats.speed}</small>
-                                            </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
                             <div className="row mt-1">
                                 <div className="col">
                                     <p className="p-2">{this.state.description}</p> 
-                                </div>
-                            </div>
-                        </div>     
-                    </div>
-                </div>
-            </div>
+                                </div> 
+                            </div>   
         );
     }
 }
