@@ -132,36 +132,40 @@ export default class Pokemon extends Component {
             //     </div>
             // </div>
 
-            <div className="card-body">
-                <div className="row align-items-center">
-                        <div className="col-md-3">
-                            <img src={this.state.image}
-                            className="card-img-top rounded mx-auto mt-2"/> 
-                        </div>
-                        <div className="col-md-9">
-                            <h4 className="mx-auto">
-                                {this.state.name
-                                    .toLowerCase()
-                                    .split(' ')
-                                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                                    .join(' ')}
-                            </h4>
+            <div className="col">
+                <div className="card">
+                    <div className="card-body">
                         <div className="row align-items-center">
-                        <h4 className="mx-auto">
-                                {this.state.abilities
-                                    .toLowerCase()
-                                    .split(' ')
-                                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                                    .join(' ')}
-                            </h4>
+                            <div className="col-md-3">
+                                <img src={this.state.image}
+                                className="card-img-top rounded mx-auto mt-2"/> 
+                            </div>
+                            <div className="col-md-9">
+                                <h4 className="mx-auto">
+                                    {this.state.name
+                                        .toLowerCase()
+                                        .split(' ')
+                                        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                                       .join(' ')}
+                                </h4>
+                            <div className="row align-items-center">
+                                <h4 className="mx-auto">
+                                    {this.state.abilities
+                                        .toLowerCase()
+                                        .split(' ')
+                                        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                                        .join(' ')}
+                                </h4>
+                            </div>
+                        <div className="card-footer">
+                            <div className="row mt-1">
+                                    <div className="col">
+                                        <p className="p-2">{this.state.description}</p> 
+                                        </div>  
+                                    </div>      
+                                 </div>
+                            </div>
                         </div>
-                    <div className="card-footer">
-                        <div className="row mt-1">
-                                <div className="col">
-                                    <p className="p-2">{this.state.description}</p> 
-                                </div>  
-                            </div>      
-                         </div>
                     </div>
                 </div>
             </div>
