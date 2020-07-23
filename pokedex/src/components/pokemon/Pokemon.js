@@ -102,63 +102,69 @@ export default class Pokemon extends Component {
 
     render() {
         return (
-            <div className="col">
-                <div className="card">
-                    <div className="card-header">
-                        <div className="row">
-                            <div className="col-5">
-                                <h5>{this.state.pokemonId}</h5>
-                            </div>
-                            <div className="col-7">
-                                <div className="float-right">
-                                    {this.state.types.map(type => (
-                                        <span
-                                            key={type}
-                                            className="badge badge-primary badge-pill mr-1"
-                                            style ={{
-                                                backgroundColor: `#${TYPE_COLORS[type]}`, 
-                                                color: 'white'
-                                            }}>
-                                            {type
-                                            .toLowerCase()
-                                            .split(' ')
-                                            .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                                            .join(' ')}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
+            // <div className="col">
+            //     <div className="card">
+            //         <div className="card-header">
+            //             <div className="row">
+            //                 <div className="col-5">
+            //                     <h5>{this.state.pokemonId}</h5>
+            //                 </div>
+            //                     <div className="col-7">
+            //                     <div className="float-right">
+            //                         {this.state.types.map(type => (
+            //                             <span
+            //                                 key={type}
+            //                                 className="badge badge-primary badge-pill mr-1"
+            //                                 style ={{
+            //                                     backgroundColor: `#${TYPE_COLORS[type]}`, 
+            //                                     color: 'white'
+            //                                 }}>
+            //                                 {type
+            //                                 .toLowerCase()
+            //                                 .split(' ')
+            //                                 .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+            //                                 .join(' ')}
+            //                             </span>
+            //                         ))}
+            //                   </div>
+            //             </div>
+            //         </div>
+            //     </div>
+            // </div>
+
+            <div className="card-body">
+                <div className="row align-items-center">
+                        <div className="col-md-3">
+                            <img src={this.state.image}
+                            className="card-img-top rounded mx-auto mt-2"/> 
                         </div>
-                    </div>
-                    <div className="card-body">
-                        <div className="row align-items-center">
-                            <div className="col-md-3">
-                                <img src={this.state.image}
-                                className="card-img-top rounded mx-auto mt-2"/> 
-                            </div> 
-                            <div className="col-md-9">
+                        <div className="col-md-9">
                             <h4 className="mx-auto">
                                 {this.state.name
                                     .toLowerCase()
                                     .split(' ')
                                     .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                                     .join(' ')}
-                              </h4>
-                              <div className="row align-items-center">
-                                  <div className="col-12 col-md-3">Abilities</div>
-                                  <h4 className="mx-auto">
+                            </h4>
+                        <div className="row align-items-center">
+                        <h4 className="mx-auto">
                                 {this.state.abilities
                                     .toLowerCase()
                                     .split(' ')
                                     .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                                     .join(' ')}
-                              </h4>
-                              </div>
-                            <div className="row mt-1">
+                            </h4>
+                        </div>
+                    <div className="card-footer">
+                        <div className="row mt-1">
                                 <div className="col">
                                     <p className="p-2">{this.state.description}</p> 
-                                </div> 
-                            </div>   
+                                </div>  
+                            </div>      
+                         </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
