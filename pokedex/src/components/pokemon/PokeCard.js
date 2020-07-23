@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 
 
 const Sprite = styled.img `
-    width: 5em;
-    height: 5em; 
+    width: 4em;
+    height: 4em; 
 `;
 
 const Card = styled.div`
