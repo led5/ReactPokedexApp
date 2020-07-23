@@ -189,8 +189,7 @@ export default class Pokemon extends Component {
                                             style ={{
                                                 backgroundColor: `#${TYPE_COLORS[type]}`, 
                                                 color: 'white'
-                                            }}
-                                        >
+                                            }}>
                                             {type
                                             .toLowerCase()
                                             .split(' ')

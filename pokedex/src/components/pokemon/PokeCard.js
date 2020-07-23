@@ -39,8 +39,8 @@ export default class PokeCard extends Component {
     componentDidMount(){
         const {name, url} = this.props;
         const pokemonId = url.split("/")[url.split("/").length - 2]; 
-        const image = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonId}.png?raw=true`
-    
+        const image = `https://www.cpokemon.com/pokes/animated/ds/${pokemonId}.gif?raw=true`
+        
         this.setState({
             name, 
             image, 
