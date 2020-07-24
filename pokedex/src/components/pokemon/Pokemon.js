@@ -148,15 +148,48 @@ export default class Pokemon extends Component {
                                         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                                        .join(' ')}
                                 </h4>
-                            <div className="row align-items-center">
-                                <h4 className="mx-auto">
-                                    {this.state.abilities
-                                        .toLowerCase()
-                                        .split(' ')
-                                        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                                        .join(' ')}
-                                </h4>
-                            </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">Type</th>
+                                            <th scope="col">{this.state.types.map(type => (
+                                                <span
+                                                     key={type}
+                                                    className="badge badge-primary badge-pill mr-1"
+                                                    style ={{
+                                                    backgroundColor: `#${TYPE_COLORS[type]}`, 
+                                                    color: 'white'
+                                                }}>
+                                                {type
+                                                    .toLowerCase()
+                                                    .split(' ')
+                                                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                                                    .join(' ')}
+                                            </span>
+                                        ))}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Abilities</th>
+                                        <td> <h6 className="mx-auto">
+                                            {this.state.abilities
+                                            .toLowerCase()
+                                            .split(' ')
+                                            .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                                            .join(' ')}
+                                        </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Height</th>
+                                        <td><h6 className="mx-auto">{this.state.height}</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Weight</th>
+                                        <td><h6 className="mx-auto">{this.state.weight}</h6></td>
+                                    </tr>
+                                </tbody>
+                                </table>
                         <div className="card-footer">
                             <div className="row mt-1">
                                     <div className="col">

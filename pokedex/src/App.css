@@ -2,19 +2,13 @@
     background-attachment: fixed;
     background-position: center; 
     background-repeat: repeat;
-    background-color: #fafafa;
+    background-color: #ffffff;
     padding-top: 4rem;
     min-height: vh; 
 }
 
 .navbar{
-    background-color: #e62c29 !important;
+    background-color: #e64529 !important;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
