@@ -151,7 +151,7 @@ export default class Pokemon extends Component {
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                        <th class="table-secondary" scope="col">Type</th>
+                                        <th class="table-light" scope="col">Type</th>
                                             <th scope="col">{this.state.types.map(type => (
                                                 <span
                                                      key={type}
@@ -171,7 +171,7 @@ export default class Pokemon extends Component {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th class="table-secondary" scope="row">Abilities</th>
+                                        <th class="table-light" scope="row">Abilities</th>
                                         <td> <h6 className="mx-auto">
                                             {this.state.abilities
                                             .toLowerCase()
@@ -181,11 +181,11 @@ export default class Pokemon extends Component {
                                         </h6></td>
                                     </tr>
                                     <tr>
-                                        <th class="table-secondary" scope="row">Height</th>
+                                        <th class="table-light" scope="row">Height</th>
                                         <td><h6 className="mx-auto">{this.state.height}</h6></td>
                                     </tr>
                                     <tr>
-                                        <th class="table-secondary" scope="row">Weight</th>
+                                        <th class="table-light" scope="row">Weight</th>
                                         <td><h6 className="mx-auto">{this.state.weight}</h6></td>
                                     </tr>
                                 </tbody>
