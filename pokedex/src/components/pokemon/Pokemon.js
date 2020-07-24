@@ -102,36 +102,6 @@ export default class Pokemon extends Component {
 
     render() {
         return (
-            // <div className="col">
-            //     <div className="card">
-            //         <div className="card-header">
-            //             <div className="row">
-            //                 <div className="col-5">
-            //                     <h5>{this.state.pokemonId}</h5>
-            //                 </div>
-            //                     <div className="col-7">
-            //                     <div className="float-right">
-            //                         {this.state.types.map(type => (
-            //                             <span
-            //                                 key={type}
-            //                                 className="badge badge-primary badge-pill mr-1"
-            //                                 style ={{
-            //                                     backgroundColor: `#${TYPE_COLORS[type]}`, 
-            //                                     color: 'white'
-            //                                 }}>
-            //                                 {type
-            //                                 .toLowerCase()
-            //                                 .split(' ')
-            //                                 .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-            //                                 .join(' ')}
-            //                             </span>
-            //                         ))}
-            //                   </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div>
-
             <div className="col">
                 <div className="card">
                     <div className="card-body">
@@ -155,7 +125,7 @@ export default class Pokemon extends Component {
                                             <th scope="col">{this.state.types.map(type => (
                                                 <span
                                                      key={type}
-                                                    className="badge badge-primary badge-pill mr-1"
+                                                    className="badge badge-secondary mr-1"
                                                     style ={{
                                                     backgroundColor: `#${TYPE_COLORS[type]}`, 
                                                     color: 'white'
