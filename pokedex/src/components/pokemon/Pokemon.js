@@ -55,14 +55,11 @@ export default class Pokemon extends Component {
 
         const pokeRes = await axios.get(pokeUrl);
         const name = pokeRes.data.name;
-        const image = pokeRes.data.sprites.front_default;
+        const image = `https://www.cpokemon.com/pokes/animated/ds/${pokemonId}.gif?raw=true`;
 
-        const height =
-            Math.round((pokeRes.data.height * 0.328084 + 0.0001) * 100) / 100;
-        const weight =
-            Math.round((pokeRes.data.height * 0.220462 + 0.0001) * 100) / 100;
+        const height = Math.round((pokeRes.data.height * 0.328084 + 0.0001) * 100) / 100; 
+        const weight = Math.round((pokeRes.data.height * 0.220462 + 0.0001) * 100) / 100;
         const types = pokeRes.data.types.map((type) => type.type.name);
-
         const abilities = pokeRes.data.abilities
             .map((ability) => {
                 return ability.ability.name
@@ -107,17 +104,16 @@ export default class Pokemon extends Component {
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-md-3">
-                                <img src={this.state.image}
-                                className="card-img-top rounded mx-auto mt-2"/> 
+                                <img src={this.state.image} class="card-img-bottom"/> 
                             </div>
                             <div className="col-md-9">
-                                <h4 className="mx-auto">
-                                    {this.state.name
+                            <h4><span class="d-block p-2 text-white">
+                                        No.{this.state.pokemonId} {this.state.name
                                         .toLowerCase()
                                         .split(' ')
                                         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                                        .join(' ')}
-                                </h4>
+                                </span></h4>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -152,11 +148,11 @@ export default class Pokemon extends Component {
                                     </tr>
                                     <tr>
                                         <th class="table-light" scope="row">Height</th>
-                                        <td><h6 className="mx-auto">{this.state.height}</h6></td>
+                                        <td><h6 className="mx-auto">{this.state.height}" </h6></td>
                                     </tr>
                                     <tr>
                                         <th class="table-light" scope="row">Weight</th>
-                                        <td><h6 className="mx-auto">{this.state.weight}</h6></td>
+                                        <td><h6 className="mx-auto">{this.state.weight} lbs</h6></td>
                                     </tr>
                                 </tbody>
                                 </table>

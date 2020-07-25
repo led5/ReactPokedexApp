@@ -11,3 +11,17 @@
     background-color: #e64529 !important;
 }
 
+.card-img-bottom {
+    width: 40%;
+    position: absolute; 
+    align-content: center;
+}
+
+.table-light{
+    background-color:#f7f7f7 !important;
+}
+
+.d-block{
+    background-color: #110300 !important;
+}
+
