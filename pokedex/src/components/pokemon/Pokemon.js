@@ -29,23 +29,9 @@ export default class Pokemon extends Component {
         image: "",
         types: [],
         description: "",
-
-        stats: {
-            hp: "",
-            attack: "",
-            defense: "",
-            speed: "",
-            specialAttack: "",
-            specialDefense: "",
-        },
         height: "",
         weight: "",
-        eggGroup: "",
         abilities: "",
-        genderRatioMale: "",
-        genderRatioFemale: "",
-        evs: "",
-        hatchSteps: "",
     };
 
     async componentDidMount() {
