@@ -1,14 +1,13 @@
 .App{
     background-attachment: fixed;
     background-position: center; 
-    background-repeat: repeat;
     background-color: #ffffff;
     padding-top: 4rem;
     min-height: vh; 
 }
 
 .navbar{
-    background-color: #e64529 !important;
+    background-color: #000000 !important;
 }
 
 .card-img-top-sprite {
@@ -20,7 +19,21 @@
     background-color:#f7f7f7 !important;
 }
 
+.table-fill{
+    background-color:#ffffff !important;
+}
+
+
+
 .d-block{
     background-color: #110300 !important;
+}
+
+.bg-card{
+    background-color: #e65529!important;
+}
+
+.footer-bg{
+    background-color:#ffffff !important;
 }
 

@@ -87,7 +87,7 @@ export default class Pokemon extends Component {
     render() {
         return (
             <div className="col">
-                <div className="card bg-light">
+                <div className="card bg-card">
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-md-3">
@@ -107,7 +107,7 @@ export default class Pokemon extends Component {
                                     <thead>
                                         <tr>
                                         <th class="table-light" scope="col">Type</th>
-                                            <th scope="col">{this.state.types.map(type => (
+                                            <th class="table-fill" scope="col">{this.state.types.map(type => (
                                                 <span
                                                      key={type}
                                                     className="badge badge-secondary mr-1"
@@ -127,7 +127,7 @@ export default class Pokemon extends Component {
                                 <tbody>
                                     <tr>
                                         <th class="table-light" scope="row">Abilities</th>
-                                        <td> <h6 className="mx-auto">
+                                        <td class="table-fill"> <h6 className="mx-auto">
                                             {this.state.abilities
                                             .toLowerCase()
                                             .split(' ')
@@ -137,15 +137,15 @@ export default class Pokemon extends Component {
                                     </tr>
                                     <tr>
                                         <th class="table-light" scope="row">Height</th>
-                                        <td><h6 className="mx-auto">{this.state.height}" </h6></td>
+                                        <td class="table-fill"><h6 className="mx-auto">{this.state.height}" </h6></td>
                                     </tr>
                                     <tr>
                                         <th class="table-light" scope="row">Weight</th>
-                                        <td><h6 className="mx-auto">{this.state.weight} lbs</h6></td>
+                                        <td class="table-fill"><h6 className="mx-auto">{this.state.weight} lbs</h6></td>
                                     </tr>
                                 </tbody>
                                 </table>
-                        <div className="card-footer">
+                        <div className="card-footer footer-bg">
                             <div className="row mt-1">
                                     <div className="col">
                                         <p className="p-2">{this.state.description}</p> 
