@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 const TYPE_COLORS = {
     bug: "B1C12E",
     dark: "4F3A2D",
@@ -86,7 +87,7 @@ export default class Pokemon extends Component {
     render() {
         return (
             <div className="col">
-                <div className="card">
+                <div className="card bg-light">
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-md-3">
