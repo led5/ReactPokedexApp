@@ -108,7 +108,7 @@ export default class Pokemon extends Component {
                             </div>
                             <div className="col-md-9">
                             <h4><span class="d-block p-2 text-white">
-                                        No.{this.state.pokemonId} {this.state.name
+                                        <small>No.{this.state.pokemonId}</small> &nbsp;&nbsp; {this.state.name
                                         .toLowerCase()
                                         .split(' ')
                                         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
