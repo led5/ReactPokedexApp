@@ -31,9 +31,15 @@
 
 .bg-card{
     background-color: #e65529!important;
+    background-image: url("pokeball.png");
+    background-size: 35%;
+    background-position: right 695px center; 
+    background-repeat: no-repeat;
 }
 
 .footer-bg{
     background-color:#ffffff !important;
 }
+
+
 
