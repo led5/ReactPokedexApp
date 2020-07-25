@@ -90,7 +90,9 @@ export default class Pokemon extends Component {
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-md-3">
-                                <img src={this.state.image} class="card-img-bottom"/> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src={this.state.image} class="card-img-top-sprite mx-auto mt-2"/> 
                             </div>
                             <div className="col-md-9">
                             <h4><span class="d-block p-2 text-white">

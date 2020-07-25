@@ -11,9 +11,9 @@
     background-color: #e64529 !important;
 }
 
-.card-img-bottom {
-    width: 40%;
-    position: right;
+.card-img-top-sprite {
+    width: 100px;
+    height: 100px;
 }
 
 .table-light{
