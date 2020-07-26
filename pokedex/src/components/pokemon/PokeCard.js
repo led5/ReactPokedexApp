@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; 
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import './Pokemon';
 
 const Sprite = styled.img `  
     width: 3.8em;
@@ -10,6 +9,7 @@ const Sprite = styled.img `
 
 const Card = styled.div`
     text-align: center;
+    background-color: #e65529 !important; 
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     &:hover{
@@ -63,7 +63,7 @@ export default class PokeCard extends Component {
                     </div>
                     <p></p>
                     <div className="card-body mx-auto">
-                        <h6 className="card-subtitle mb-2 text-muted"> No.{this.state.pokemonId}</h6>
+                        <h6 className="card-subtitle mb-2"> No.{this.state.pokemonId}</h6>
                             <h5 className="card-title">{this.state.name.toLowerCase().split(" ").map(letter => letter.charAt(0).toUpperCase()+ letter.substring(1))
                             .join(' ')}</h5>
                     </div>

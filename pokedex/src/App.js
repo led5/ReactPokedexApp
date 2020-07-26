@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App" style={{background: `url(${background})`}}> 
+        <div className="App"> 
           <NavBar />
             <div className="container">
               <Switch>
