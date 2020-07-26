@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Sprite = styled.img `  
     width: 3.8em;
-    height: 3.8em; 
+    height: 3.8em;
 `;
 
 const Card = styled.div`
@@ -53,7 +53,6 @@ export default class PokeCard extends Component {
     }
 
     render() {
-
         return (
             <div className="col-md-3 cold-sm-6 mb-5">
                 <StyledLink to={`pokemon/${this.state.pokemonId}`}>
