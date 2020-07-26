@@ -58,7 +58,7 @@ export default class PokeCard extends Component {
             <div className="col-md-3 cold-sm-6 mb-5">
                 <StyledLink to={`pokemon/${this.state.pokemonId}`}>
                 <Card className="card">
-                    <div className="card-header border-gray">
+                    <div className="card-header card-header-bg">
                         <Sprite className="card-img-top mx-auto mt-2" src={this.state.image}></Sprite>
                     </div>
                     <p></p>
