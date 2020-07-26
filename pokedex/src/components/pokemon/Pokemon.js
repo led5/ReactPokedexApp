@@ -44,8 +44,11 @@ export default class Pokemon extends Component {
         const name = pokeRes.data.name;
         const image = `https://www.cpokemon.com/pokes/animated/ds/${pokemonId}.gif?raw=true`;
 
-        const height = Math.round((pokeRes.data.height * 0.328084 + 0.0001) * 100) / 100; 
-        const weight = Math.round((pokeRes.data.height * 0.220462 + 0.0001) * 100) / 100;
+        const height = 
+            Math.round((pokeRes.data.height * 0.328084 + 0.0001) * 100) / 100; 
+        const weight = 
+            Math.round((pokeRes.data.weight * 0.220462 + 0.0001) * 100) / 100;
+
         const types = pokeRes.data.types.map((type) => type.type.name);
         const abilities = pokeRes.data.abilities
             .map((ability) => {
