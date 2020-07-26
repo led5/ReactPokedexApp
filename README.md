@@ -20,8 +20,9 @@ After downloading, in the terminal, enter:
 
 ### Something Fun for the Future
 
-
-Add a button to the entry, playing the pokemon's cry on click 📢
+<li> Add a search bar to the dashboard 🔍</li>
+<li>Add a button to the entry, playing the pokemon's cry on click 📢</li>
+<li>Expand and include a National section for pokemon that aren't native to Kanto 🌍</li>
 
 
 # Resources 
