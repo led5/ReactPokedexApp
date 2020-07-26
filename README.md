@@ -26,7 +26,7 @@ Add a button to the entry, playing the pokemon's cry on click 📢
 
 # Resources 
 
-<li><b>Adapted from Christ Stayte:</b> https://www.youtube.com/watch?v=XehSJF85F38&t=2s</li>
+<li><b>Adapted from Chris Stayte:</b> https://www.youtube.com/watch?v=XehSJF85F38&t=2s</li>
 <li><b>API:</b> https://pokeapi.co/</li>
 <li><b>Animated Sprites:</b> https://www.cpokemon.com/pokes/animated/ds/</li>
 
