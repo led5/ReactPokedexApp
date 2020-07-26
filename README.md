@@ -4,14 +4,14 @@ My first React application inspired by the iconic Pokedex. The application makes
 
 <p></p>
 
-#### Design
+### Design
 <img src="/pokedex/demo/Pokédex_entry_SS.png"/>
 <img src="/pokedex/demo/pikachu_entry_mine.gif"/>
 <b>Top:</b> Reference/inspiration from Sword and Shield, <b>Bottom:</b> Mine 
 
 <p></p>
 
-#### Running the Application 
+### Running the Application 
 
 After downloading, in the terminal, enter: 
 
