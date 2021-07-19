@@ -12,12 +12,6 @@ My first React application inspired by the iconic Pokedex. The application makes
 
 <p></p>
 
-### Running the Application
-
-After downloading, in the terminal, enter: 
-
-`npm start` 
-
 ### Something Fun for the Future
 
 <li> Add a search bar to the dashboard 🔍</li>
