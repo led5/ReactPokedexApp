@@ -20,7 +20,7 @@ The application makes use of the PokéAPI and covers Gen 1 pokémon.
 # Something Fun for the Future
 - Add a search bar to the dashboard 🔍
 - Add a button to the entry, playing the pokemon's cry on click 📢
-- Expand and include a National section for pokemon that aren't native to Kanto 🌍
+- Expand and include a National section for pokémon that aren't native to Kanto 🌍
 
 # Resources 
 
