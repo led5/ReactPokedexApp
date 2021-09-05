@@ -1,26 +1,29 @@
-# ReactPokedex 
+# Description
+```
+My first React application inspired by the iconic Pokédex. 
+The application makes use of the PokéAPI and covers Gen 1 pokémon.
+```
+<p></p>
 
-My first React application inspired by the iconic Pokedex. The application makes use of the PokéAPI, covering Gen 1 pokemon.
+# Design
+<p align="center"><img src="/pokedex/demo/Pokédex_entry_SS.png"/></p>
+<b><div align="center">Image 1. Reference and Inspiration from Sword and Shield</b></div>
+<p></p>
+<p align="center"><img src="/pokedex/demo/dash_mine.gif"/></p>
+<b><div align="center">Image 2. My Design: Dashboard </b></div>
+<p></p>
+<p align="center"><img src="/pokedex/demo/pikachu_entry_mine.gif"/></p>
+<b><div align="center">Image 3. My Design: Entry </b></div>
 
 <p></p>
 
-### Design
-<img src="/pokedex/demo/Pokédex_entry_SS.png"/>
-<img src="/pokedex/demo/dash_mine.gif"/>
-<img src="/pokedex/demo/pikachu_entry_mine.gif"/>
-<b>Top:</b> Reference/inspiration from Sword and Shield, <b>Bottom:</b> Mine 
-
-<p></p>
-
-### Something Fun for the Future
-
-<li> Add a search bar to the dashboard 🔍</li>
-<li>Add a button to the entry, playing the pokemon's cry on click 📢</li>
-<li>Expand and include a National section for pokemon that aren't native to Kanto 🌍</li>
-
+# Something Fun for the Future
+- Add a search bar to the dashboard 🔍
+- Add a button to the entry, playing the pokemon's cry on click 📢
+- Expand and include a National section for pokemon that aren't native to Kanto 🌍
 
 # Resources 
 
-<li><b>API:</b> https://pokeapi.co/</li>
-<li><b>Animated Sprites:</b> https://www.cpokemon.com/pokes/animated/ds/</li>
+- API: https://pokeapi.co/
+- Animated Sprites: https://www.cpokemon.com/pokes/animated/ds/ 
 
